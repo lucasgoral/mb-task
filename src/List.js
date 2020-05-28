@@ -38,8 +38,11 @@ export default function List() {
 
 <ul id='list'>
                {list.map(item=> 
-               <li className='list-el' key={item.id}><span>{item.name}</span> <span>{item.surname}</span>
-               <button className='remove' onClick={()=> {removeItem(item.id)} } >Delete</button></li> )} 
+               <li className='list-el' key={item.id}>
+                   
+                   <button className='remove' onClick={()=> {removeItem(item.id)} } >Delete</button>
+                   <p><span>{item.name}</span> <span>{item.surname}</span></p>
+               </li> )} 
                </ul>
                <p className='error'>
                      {isCorrect ? '' : 'Please fill input fields correctly.'}

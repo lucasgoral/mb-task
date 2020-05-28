@@ -8,3 +8,24 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+ul {
+    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.list-el {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.remove {
+    order: 3;
+}
+
+.remove:hover+p {
+    color: red
+}
