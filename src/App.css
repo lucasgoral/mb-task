@@ -92,3 +92,9 @@
 #ewrapper:hover #e {
     left: 100%;
 }
+
+#f {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 20px;
+}

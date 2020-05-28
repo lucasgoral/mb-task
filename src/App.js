@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import List from './List'
 import './App.css';
 
 function App() {
@@ -15,7 +15,10 @@ function App() {
             <div id="e"></div>
             </div>
           </div>
-          <div className="f"></div>
+          <div id="f">
+            
+            <List></List>
+          </div>
         </div>
       
       </div>
