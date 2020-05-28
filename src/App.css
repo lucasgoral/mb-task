@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+#a {
+    position: fixed;
+    top: 0;
+    left: 150px;
+    right: 150px;
+    background: red;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#d {
+    position: fixed;
+    bottom: 0;
+    left: 150px;
+    right: 150px;
+    background: green;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#b {
+    width: calc(100% - 300px);
+    min-height: 2500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#c {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    background: blue;
+    height: 300px;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+#c:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: -9999px;
+    bottom: -9999px;
+    width: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#c:after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: -100px;
+    top: -9999px;
+    bottom: -9999px;
+    width: 100px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#e {
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    margin-left: -100px;
+    transition: left .4s ease;
+}
+
+#ewrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+}
+
+#ewrapper:hover {
+    cursor: pointer;
+}
+
+#ewrapper:hover #e {
+    left: 100%;
 }
