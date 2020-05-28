@@ -34,13 +34,16 @@ export default function List() {
             <form>
                 <input name="Name" ref={inputName} placeholder='Name' ></input>
                 <input name="Surname" ref={inputSurname}  placeholder='Surname'></input>
-                <button type="button" onClick={add}>Add</button>
-                 <p className='error'>
+                <button type="button" onClick={add} disabled={list.length >= 5 ? true : false}>Add</button>
+
+<ul id='list'>
+               {list.map(item=> 
+               <li key={item.id}><span>{item.name}</span> <span>{item.surname}</span>
+               <button className='remove' onClick={()=> {removeItem(item.id)} } >Delete</button></li> )} 
+               </ul>
+               <p className='error'>
                      {isCorrect ? '' : 'Please fill input fields correctly.'}
                  </p>
-
-               {list.map(item=> <li key={item.id}><span>{item.name}</span> <span>{item.surname}</span>
-               <button onClick={()=> {removeItem(item.id)}}>Delete</button></li> )} 
             </form>
 
         </div>
