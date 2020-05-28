@@ -13,20 +13,20 @@ export default function List() {
     }
     const add = () => {
 
-validate();
-if(isCorrect) {
-    setList([...list, {name: inputName.current.value, surname: inputSurname.current.value, id: Math.random() }])
-}
-    }
-    const validate = () => {
-        if(inputName.current.value.trim() && inputName.current.value.trim()) {
+        if(inputName.current.value.trim() && inputSurname.current.value.trim()) {
             setValidation(true);
+            setList([...list, {name: inputName.current.value, surname: inputSurname.current.value, id: Math.random() }])
         }
         else {
             setValidation(false);
-          
+
         }
+
+
+
+
     }
+
 
     return (
         <div>
